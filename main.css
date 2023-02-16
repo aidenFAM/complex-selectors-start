@@ -31,10 +31,32 @@ nav ul li a {
 
 /* child combinator ( > ) */
 
+main > p {
+    font-size: 1.2rem;
+}
+
 /* adjacent combinator ( + ) */
+
+h2 + p {
+    background-color: #212121;
+    color: lightgray;
+    padding: 1rem;
+}
 
 /* sibling combinator ( ~ ) */
 
+.stars span {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.stars span:hover ~ span {
+    border: 5px solid red;
+    opacity: 0.3;
+}
+
+
+/* Media Queries */
 @media screen and (min-width: 768px) {
     nav ul {
         flex-direction: row;
